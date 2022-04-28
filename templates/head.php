@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
-    <meta name="description" content="La société qui conçoit et commercialise des panneaux solaires à haut
-    rendement (25%). Dans le cadre de ses activités Sunpower a développé des
-    ombrières solaires pour la recharge des véhicules électriques">
+    <meta name="description" content="Trekker est un outil de gestion de projet en ligne, lancé en avril 2022 et inspiré par la méthode Kanban de Toyota. Il repose sur une organisation des projets en planches listant des cartes, chacune représentant des tâches.">
     <meta name="theme-color" content="">
     <meta name="msapplication-TileColor" content="">
-    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logo.webp"/>
     <link rel="stylesheet" href="../assets/css/main.css">
-    <title><?= $_GET['page'] ?? "Mon site" ?></title>
+    <title><?= $_GET['page'] ?? "Bienvenue" ?></title>
 
 </head>

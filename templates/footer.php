@@ -3,9 +3,9 @@
         <div class="col-12 col-md pb-5">
             <div class="fs-5">Trekker</div>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="./pages/mentionlegal.html"
+                <li class="nav-item mb-2"><a href="index.php?page=mentionlegal"
                                              class="nav-link p-0 text-white">Mentions légales</a></li>
-                <li class="nav-item mb-2"><a href="./pages/confidentialite.html"
+                <li class="nav-item mb-2"><a href="index.php?page=confidentialite"
                                              class="nav-link p-0 text-white">Politique de
                         confidentialité</a></li>
                 <li class="nav-item mb-2"><a href="./pages/societe.html" class="nav-link p-0 text-white">A

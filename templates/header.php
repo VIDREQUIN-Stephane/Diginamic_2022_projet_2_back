@@ -2,7 +2,7 @@
 <header class="px-5 py-2" role="banner" id="menu-de-navigation">
     <nav class="navbar fixed-top shadow-sm py-4 navbar-expand-md navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="index.php?page=home">
                 <img src="./assets/images/logo.webp" alt="logo trekker" width="" height="30">
                 Trekker
             </a>

@@ -1,10 +1,11 @@
 <?php
 $page = 'home.php';
 if(isset($_GET['page'])){
-    switch ($_GET['page']){
-        case 'connection':
-            $page = 'connection.php';
-            break;
+    if ($_GET['page'] == 'confidentialite') {
+        $page = 'confidentialite.php';
+    }
+    if ($_GET['page'] == 'mentionlegal') {
+        $page = 'mentionlegal.php';
     }
 }
 include_once(dirname(__FILE__).'/../../pages/'.$page);
