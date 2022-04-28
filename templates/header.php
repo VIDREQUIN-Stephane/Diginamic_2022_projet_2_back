@@ -3,7 +3,7 @@
     <nav class="navbar fixed-top shadow-sm py-4 navbar-expand-md navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="">
-                <img src="./assets/images/2132707.png" alt="logo trekker" width="" height="30">
+                <img src="./assets/images/logo.webp" alt="logo trekker" width="" height="30">
                 Trekker
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
