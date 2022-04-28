@@ -1,7 +1,7 @@
 <footer class="py-5 bg-primary px-5">
     <div class="row">
         <div class="col-12 col-md pb-5">
-            <div class="fs-5">Sunpower</div>
+            <div class="fs-5">Trekker</div>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="./pages/mentionlegal.html"
                                              class="nav-link p-0 text-white">Mentions légales</a></li>
@@ -14,57 +14,35 @@
         </div>
 
         <div class="col-12 col-md pb-5">
-            <div class="fs-5">Découvrez Sunpower</div>
+            <div class="fs-5">Découvrez Trekker</div>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">2, rue de l'innovation</a>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">5, Avenue du progrès</a>
                 </li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">38 100 Grenoble</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">04 76 40 22 22</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">contact@sunpower.fr</a>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">contact@trakker.fr</a>
                 </li>
             </ul>
         </div>
 
-        <div class="col-12 col-md pb-5">
-            <div class="fs-5">Nos Partenaires</div>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="./pages/partenaires.html"
-                                             class="nav-link p-0 text-white">Stellantis</a></li>
-                <li class="nav-item mb-2"><a href="./pages/partenaires.html"
-                                             class="nav-link p-0 text-white">INES</a></li>
-                <li class="nav-item mb-2"><a href="./pages/partenaires.html" class="nav-link p-0 text-white">CEA</a>
-                </li>
-                <li class="nav-item mb-2"><a href="./pages/partenaires.html" class="nav-link p-0 text-white">Bpi
-                        France</a></li>
-                <li class="nav-item mb-2"><a href="./pages/partenaires.html"
-                                             class="nav-link p-0 text-white">Blackrock</a></li>
-                <li class="nav-item mb-2"><a href="./pages/partenaires.html"
-                                             class="nav-link p-0 text-white">Agglomération de
-                        Montpellier</a></li>
-                <li class="nav-item mb-2"><a href="./pages/partenaires.html" class="nav-link p-0 text-white">Conseil
-                        départemental de
-                        l'Hérault</a></li>
-                <li class="nav-item mb-2"><a href="./pages/partenaires.html" class="nav-link p-0 text-white">Région
-                        Occitanie</a></li>
-            </ul>
-        </div>
+
+<!--        <div class="col-12 col-md">-->
+<!--            <form>-->
+<!--                <div class="fs-5">Abonnez-vous à notre newsletter</div>-->
+<!--                <p>Recevez chaque mois nos actus produits et activités</p>-->
+<!--                <div class="d-flex w-100 gap-2 col-6 col-md">-->
+<!--                    <label for="newsletter1" class="visually-hidden">Votre adresse email !</label>-->
+<!--                    <input id="newsletter1" type="text" class="form-control" placeholder="Votre adresse email !">-->
+<!--                    <button class="btn btn-secondary" type="button">Abonnez-vous</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
 
 
-        <div class="col-12 col-md">
-            <form>
-                <div class="fs-5">Abonnez-vous à notre newsletter</div>
-                <p>Recevez chaque mois nos actus produits et activités</p>
-                <div class="d-flex w-100 gap-2 col-6 col-md">
-                    <label for="newsletter1" class="visually-hidden">Votre adresse email !</label>
-                    <input id="newsletter1" type="text" class="form-control" placeholder="Votre adresse email !">
-                    <button class="btn btn-secondary" type="button">Abonnez-vous</button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <div class="d-flex justify-content-between pt-4 mt-4 border-top">
-        <p>&copy; 2022 - Sunpower - Tous droits réservés.</p>
+        <p>&copy; 2022 - Trekker - Tous droits réservés.</p>
         <ul class="list-unstyled d-flex">
             <li class="ms-3"><a title="Youtube" class="link-dark" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
