@@ -1,6 +1,6 @@
-<footer class="py-5 bg-primary px-5">
+<footer class="py-2 bg-primary px-5">
     <div class="row">
-        <div class="col-12 col-md pb-5">
+        <div class="col-12 col-md ">
             <div class="fs-5">Trekker</div>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="index.php?page=mentionlegal"
@@ -8,17 +8,12 @@
                 <li class="nav-item mb-2"><a href="index.php?page=confidentialite"
                                              class="nav-link p-0 text-white">Politique de
                         confidentialité</a></li>
-                <li class="nav-item mb-2"><a href="./pages/societe.html" class="nav-link p-0 text-white">A
-                        propos</a></li>
             </ul>
         </div>
 
-        <div class="col-12 col-md pb-5">
+        <div class="col-12 col-md">
             <div class="fs-5">Découvrez Trekker</div>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">5, Avenue du progrès</a>
-                </li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">38 100 Grenoble</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">04 76 40 22 22</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">contact@trakker.fr</a>
                 </li>
@@ -41,7 +36,7 @@
 
 
 
-    <div class="d-flex justify-content-between pt-4 mt-4 border-top">
+    <div class="d-flex justify-content-between pt-2 border-top">
         <p>&copy; 2022 - Trekker - Tous droits réservés.</p>
         <ul class="list-unstyled d-flex">
             <li class="ms-3"><a title="Youtube" class="link-dark" href="#">
