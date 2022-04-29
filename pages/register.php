@@ -49,7 +49,7 @@ if (isset ($_POST['submit'])) {
     }
 }
 ?>
-<!-- FORMAULAIRE D'ENREGISTREMENT -->
+<!-- FORMULAIRE D'ENREGISTREMENT -->
 <form action="" method="post">
     <!-- NOM -->
     <label for="nom">
