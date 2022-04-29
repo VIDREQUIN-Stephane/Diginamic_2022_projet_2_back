@@ -18,7 +18,7 @@
         </p>
     </form>
     <?php
-    include 'connectDB.php';
+    include 'config.php';
     try {
         $dbh = new PDO(DSN, LOGIN, PASSWORD, array(PDO::ATTR_PERSISTENT => true));
 
