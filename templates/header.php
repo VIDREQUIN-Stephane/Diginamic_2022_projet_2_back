@@ -22,7 +22,7 @@
                 <div class="list-group me-2">
                     <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop">
-                        <a class="btn btn-primary text-white p-0" href="">Inscription</a>
+                        <a class="btn btn-primary text-white p-0" href="#">Inscription</a>
                     </button>
                 </div>
                 <div class="list-group">
