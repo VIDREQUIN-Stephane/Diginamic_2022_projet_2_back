@@ -1,7 +1,8 @@
 <?
 class Tache{
    private string $nom;
-   private string $duree;
+   private string $dateStart;
+   private string $echeance;
    private string $comment;
 
    /**
@@ -25,21 +26,41 @@ class Tache{
    }
 
    /**
-    * Get the value of duree
+    * Get the value of dateStart
     */ 
-   public function getDuree()
+    public function getDateStart()
+    {
+       return $this->dateStart;
+    }
+ 
+    /**
+     * Set the value of dateStart
+     *
+     * @return  self
+     */ 
+    public function setDateStart($dateStart)
+    {
+       $this->dateStart = $dateStart;
+ 
+       return $this;
+    }
+
+    /**
+    * Get the value of $echeance
+    */ 
+   public function getEcheance()
    {
-      return $this->duree;
+      return $this->echeance;
    }
 
    /**
-    * Set the value of duree
+    * Set the value of $echeance
     *
     * @return  self
     */ 
-   public function setDuree($duree)
+   public function setEcheance($echeance)
    {
-      $this->duree = $duree;
+      $this->echeance = $echeance;
 
       return $this;
    }
@@ -64,15 +85,15 @@ class Tache{
       return $this;
    }
 
-   public function __construct(string $nom, ?string $duree, ?string $comment){
+   public function __construct(string $nom, ?string $echeance, ?string $comment){
       $this->nom=$nom;
-      $this->duree=$duree;
+      $this->echeance=$echeance;
       $this->comment=$comment;
    }
 
    public function __toString()
    {
-      echo ("Nom : ".$this->getNom()."<br/>Duree : ".$this->getDuree()."<br/>Commentaire : ".$this->getComment()."<br/><br/>");
+      echo ("Nom : ".$this->getNom()."<br/>Echeance : ".$this->getecheance()."<br/>Commentaire : ".$this->getComment()."<br/><br/>");
    }
 
    /**
