@@ -37,45 +37,52 @@
                 </ul>
         </nav>
 </div>
-    <h1>DRAG n DROP</h1>
 
-<div class="lists row row-cols-1 row-cols-md-3 g-4 " >
-    <div class="list col">
-        <div class="card h-100 w-50 list-item" draggable="true">
-            <img src="https://picsum.photos/1000/500?random=5" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title 1</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+
+
+        <div class="card-group lists">
+            <h1>DRAG n DROP</h1>
+            <div class="card list" id="drop-1" draggable="true" ondragstart="onDragStart(event)">
+                <div class="list-item">
+                    <div class="card-body list-item" >
+                        <h5 class="card-title">Tâche title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
             </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+            <div class="card list" id="drop-2"  draggable="true" ondragstart="onDragStart(event)">
+                <div class="list-item" >
+                    <div class="card-body list-item">
+                        <h5 class="card-title">Tâche title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card list" id="drop-3" draggable="true" ondragstart="onDragStart(event)">
+                <div class="list-item" >
+                    <div class="card-body list-item">
+                        <h5 class="card-title">Tâche title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-primary py-5" ondragover="onDragOver(event)" ondrop="onDrop(event)" >
+                <h1 class="pb-3">Categories</h1>
+                </div>
+            <div class="card border-primary py-5" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                <h1 class="pb-3">Categories 2</h1>
+            </div>
+            <div class="card border-primary py-5" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+                <h1 class="pb-3">Categories 3</h1>
             </div>
         </div>
-    </div>
-    <div class="list col">
-        <div class="card h-100 w-50 list-item draggable="true">
-            <img src="https://picsum.photos/1000/500?random=1" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title 2</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-    </div>
-    <div class="list col">
-        <div class="card h-100 w-50 list-item draggable="true">
-            <img src="https://picsum.photos/1000/500?random=3" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title 3</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
+
 <script src="assets/js/main.js"></script>
 
