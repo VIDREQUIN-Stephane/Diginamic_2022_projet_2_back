@@ -3,13 +3,13 @@ session_start();
 include 'config.php';
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=trekker', $user, $pass);
+	$bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
 }
 catch (exception $e)
 {
 	die('Erreur : ' . $e->getMessage());
 }
-echo $_SESSION['id'];
+
 //******************************** */
 //****** Cookies à inclure *********/
 //******************************** */
