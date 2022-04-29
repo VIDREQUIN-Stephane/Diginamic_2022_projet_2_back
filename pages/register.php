@@ -1,9 +1,11 @@
 <?php
 include_once "config.php";
-try {
-	$bdd = new PDO('mysql:host=localhost;dbname=trekker', $user, $pass);
+try
+{
+	$bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
 }
-catch (exception $e) {
+catch (exception $e)
+{
 	die('Erreur : ' . $e->getMessage());
 }
 // VALIDATION DU SUBMIT

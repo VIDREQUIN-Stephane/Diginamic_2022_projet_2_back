@@ -3,13 +3,12 @@ session_start();
 include 'config.php';
 try
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=trekker', $user, $pass);
+	$bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
 }
 catch (exception $e)
 {
-    die('Erreur : ' . $e->getMessage());
+	die('Erreur : ' . $e->getMessage());
 }
-
 if (isset($_SESSION['id'])) {
     $getid = intval($_SESSION['id']);
 	$requser = $bdd->prepare('SELECT * FROM utilisateur WHERE id = ?');
@@ -23,7 +22,7 @@ if (isset($_SESSION['id'])) {
     {
     ?>
     <a href="edit.php">Modifier mon profil</a> <br>
-    <a href="unlog.php">Se déconnecter</a><br><br><br>
+    <a href="unlog.php">Se déconnecter</a>
     <?php
     }
 } else {
