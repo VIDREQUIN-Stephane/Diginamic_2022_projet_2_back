@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row">
+
         <nav class="col-md-2 d-none d-md-block bg-light sidebar py-5 mt-5">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
@@ -35,6 +35,47 @@
                             <span class="ps-2">Message</span>
                         </a>
                 </ul>
-
-            </div>
         </nav>
+</div>
+    <h1>DRAG n DROP</h1>
+
+<div class="lists row row-cols-1 row-cols-md-3 g-4 " >
+    <div class="list col">
+        <div class="card h-100 w-50 list-item" draggable="true">
+            <img src="https://picsum.photos/1000/500?random=5" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title 1</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+    <div class="list col">
+        <div class="card h-100 w-50 list-item draggable="true">
+            <img src="https://picsum.photos/1000/500?random=1" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title 2</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+    <div class="list col">
+        <div class="card h-100 w-50 list-item draggable="true">
+            <img src="https://picsum.photos/1000/500?random=3" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title 3</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/main.js"></script>
+

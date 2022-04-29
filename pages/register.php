@@ -1,5 +1,6 @@
 <?php
-include_once "config.php";
+include_once './pages/config.php';
+
 try
 {
 	$bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
