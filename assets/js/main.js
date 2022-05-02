@@ -49,17 +49,17 @@ for (let i = 0; i < list_items.length; i++) {
 
         list.addEventListener('dragenter', function (e) {
             e.preventDefault();
-            this.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+            this.style.backgroundColor = 'rgba(47,47,47,0.04)';
         });
 
         list.addEventListener('dragleave', function (e) {
-            this.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+            this.style.backgroundColor = 'rgb(255,255,255)';
         });
 
         list.addEventListener('drop', function (e) {
             console.log('drop');
             this.append(draggedItem);
-            this.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+            this.style.backgroundColor = 'rgb(255,255,255)';
         });
     }
 }

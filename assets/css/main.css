@@ -482,6 +482,9 @@ progress {
 [hidden] {
   display: none !important;
 }
+span.ps-2{
+  display: none;
+}
 
 .lead {
   font-size: 1.25rem;
@@ -5614,6 +5617,9 @@ textarea.form-control-lg {
   .modal-lg,
 .modal-xl {
     max-width: 800px;
+  }
+  span.ps-2{
+    display: inline-block;
   }
 }
 @media (min-width: 1200px) {
@@ -11281,4 +11287,5 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+
 }/*# sourceMappingURL=main.css.map */

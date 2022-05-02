@@ -1,7 +1,7 @@
-<div class="container-fluid d-flex">
+<div class="container-fluid d-flex ps-0">
 
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar py-5 mt-5">
-            <div class="sidebar-sticky">
+        <nav class="col-md-2 d-md-block bg-light sidebar py-5 ">
+            <div class="sidebar-sticky ps-1">
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -38,10 +38,7 @@
         </nav>
 
         <div class="container pt-5">
-
-
             <h1 class="h3 mb-3">Kanban Board</h1>
-
             <div class="row lists pb-5">
                 <div class="col-12 col-lg-6 col-xl-3">
                     <div class="card card-border-primary">
@@ -76,7 +73,7 @@
                                 </div>
                             </div>
 
-                            <div class="list py-5">
+                            <div class="list pb-5" >
 
                             </div>
 
@@ -138,7 +135,7 @@
                                     <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
                                 </div>
                             </div>
-                            <div class="list py-5">
+                            <div class="list pb-5">
 
                             </div>
                             <a href="#" class="btn btn-primary btn-block">Add new</a>
@@ -155,7 +152,7 @@
                         </div>
                         <div class="card-body">
 
-                            <div class="list py-5">
+                            <div class="list pb-5">
 
                             </div>
 
@@ -175,7 +172,7 @@
                             <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
                         </div>
                         <div class="card-body">
-                            <div class="list py-5">
+                            <div class="list pb-5">
 
                             </div>
 
