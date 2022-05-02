@@ -1,5 +1,5 @@
 <?php
-include_once 'config_serveur.php';
+include_once 'config_sever.php';
 
 try
 {
@@ -51,44 +51,66 @@ if (isset ($_POST['submit'])) {
 }
 ?>
     <!-- FORMULAIRE D'ENREGISTREMENT -->
-    <form action="" method="post">
+
+    <form class="row g-3 needs-validatio container-fluid py-5" action="index.php?page=register" method="post">
         <!-- NOM -->
-        <label for="nom">
-            Nom :
-            <input type="text" name="nom" id="nom" value="<?php if(isset($nom)) { echo $nom; } ?>">
-        </label> <br>
+            <div class="col-md-4">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" name="nom" id="nom" value="<?php if(isset($nom)) { echo $nom; } ?>" class="form-control" required>
+                <div class="valid-feedback">
+                    Cela semble bon!
+                </div>
+            </div>
+
         <!-- PRENOM -->
-        <label for="prenom">
-            Prenom :
-            <input type="text" name="prenom" id="prenom" value="<?php if(isset($prenom)) { echo $prenom; } ?>">
-        </label> <br>
+        <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Prenom</label>
+            <input type="text" name="prenom" id="prenom" value="<?php if(isset($prenom)) { echo $prenom; } ?>" class="form-control" required>
+            <div class="valid-feedback">
+                Cela semble bon!
+            </div>
+        </div>
         <!-- EMAIL -->
-        <label for="email">
-            E-mail :
-            <input type="email" name="email" id="email" value="<?php if(isset($email)) { echo $email; } ?>">
-        </label> <br>
+            <div class="col-md-4">
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input  type="email" name="email" id="email" value="<?php if(isset($email)) { echo $email; } ?>" placeholder="name@example.com" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+            </div>
         <!-- MOT DE PASSE -->
-        <label for="mdp">
-            Mot de passe :
-            <input type="password" name="mdp" id="mdp">
-        </label> <br>
+        <div class="col-md-4">
+            <label for="mdp" class="form-label">Mot de passe</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="mdp" id="mdp">
+            </div>
+        </div>
         <!-- CONFIRMATION MOT DE PASSE -->
-        <label for="mdp_">
-            Confirmation mot de passe :
-            <input type="password" name="mdp_" id="mdp_">
-        </label> <br>
+        <div class="col-md-4">
+            <label for="mdp_" class="form-label">Mot de passe</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="mdp_" id="mdp_">
+            </div>
+        </div>
         <!-- PHOTO -->
-        <label for="photo">
-            Photo de profil :
-            <input type="file" name="photo" id="photo">
-        </label> <br>
+        <div class="mb-3 col-md-4">
+            <label for="photo" class="form-label">Photo de profil :</label>
+            <input class="form-control" type="file" name="photo" id="photo">
+        </div>
         <!-- SUBMIT -->
-        <input type="submit" value="Je m'enregistre" name="submit" id="sumbit">
+        <div class="col-12">
+            <button type="submit" value="Je m'enregistre" class="btn btn-primary mb-3 text-white" name="submit" id="sumbit">Je m'enregistre</button>
+        </div>
+        <a href="index.php?page=login" class="link-info">Déjà inscrit ?</a>
     </form>
-    <a href="login.php">déjà inscrit ?</a><br>
+
 <?php
 if (isset($error))
 {
-    echo '<font color="red">' . $error . "</font>";
+    echo '<div class="alert alert-danger">'.$error.'</div>';
 }
 ?>
+
