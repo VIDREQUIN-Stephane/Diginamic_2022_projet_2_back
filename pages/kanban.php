@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid d-flex">
 
         <nav class="col-md-2 d-none d-md-block bg-light sidebar py-5 mt-5">
             <div class="sidebar-sticky">
@@ -36,53 +36,166 @@
                         </a>
                 </ul>
         </nav>
-</div>
+
+        <div class="container pt-5">
 
 
+            <h1 class="h3 mb-3">Kanban Board</h1>
+
+            <div class="row lists pb-5">
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="card card-border-primary">
+                        <div class="card-header">
+                            <h5 class="card-title">Categories 1</h5>
+                            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
+                        </div>
+                        <div class="card-body p-3">
+
+                            <div class="card mb-3 bg-light list-item" draggable="true">
+                                <div class="card-body p-3">
+                                    <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada.</p>
+                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
+                                </div>
+                            </div>
+                            <div class="card mb-3 bg-light list-item" draggable="true">
+                                <div class="card-body p-3">
+                                    <div class="float-right mr-n2">
+
+                                    </div>
+                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
+                                </div>
+                            </div>
+                            <div class="card mb-3 bg-light list-item" draggable="true">
+                                <div class="card-body p-3">
+                                    <div class="float-right mr-n2">
+
+                                    </div>
+                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
+                                </div>
+                            </div>
+
+                            <div class="list py-5">
+
+                            </div>
+
+                            <a href="#" class="btn btn-primary btn-block">Add new</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="card card-border-warning">
+                        <div class="card-header">
+                            <div class="card-actions float-right">
+                                <div class="dropdown show">
+                                    <a href="#" data-toggle="dropdown" data-display="static">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
+                                            <circle cx="12" cy="12" r="1"></circle>
+                                            <circle cx="19" cy="12" r="1"></circle>
+                                            <circle cx="5" cy="12" r="1"></circle>
+                                        </svg>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="card-title">In Progress</h5>
+                            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="card mb-3 bg-light list-item" draggable="true">
+                                <div class="card-body p-3">
+                                    <div class="float-right mr-n2">
+
+                                    </div>
+                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3 bg-light list-item" draggable="true">
+                                <div class="card-body p-3">
+                                    <div class="float-right mr-n2">
+
+                                    </div>
+                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
+                                </div>
+                            </div>
+                            <div class="card mb-3 bg-light list-item" draggable="true">
+                                <div class="card-body p-3">
+                                    <div class="float-right mr-n2">
+
+                                    </div>
+                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
+                                </div>
+                            </div>
+                            <div class="list py-5">
+
+                            </div>
+                            <a href="#" class="btn btn-primary btn-block">Add new</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="card card-border-danger">
+                        <div class="card-header">
+
+                            <h5 class="card-title">On hold</h5>
+                            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="list py-5">
+
+                            </div>
 
 
-        <div class="card-group lists">
-            <h1>DRAG n DROP</h1>
-            <div class="card list" id="drop-1" draggable="true" ondragstart="onDragStart(event)">
-                <div class="list-item">
-                    <div class="card-body list-item" >
-                        <h5 class="card-title">Tâche title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <a href="#" class="btn btn-primary btn-block">Add new</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                    <div class="card card-border-success">
+                        <div class="card-header">
+                            <div class="card-actions float-right">
+
+                            </div>
+                            <h5 class="card-title">Completed</h5>
+                            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="list py-5">
+
+                            </div>
+
+                            <a href="#" class="btn btn-primary btn-block">Add new</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="card list" id="drop-2"  draggable="true" ondragstart="onDragStart(event)">
-                <div class="list-item" >
-                    <div class="card-body list-item">
-                        <h5 class="card-title">Tâche title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="card list" id="drop-3" draggable="true" ondragstart="onDragStart(event)">
-                <div class="list-item" >
-                    <div class="card-body list-item">
-                        <h5 class="card-title">Tâche title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="card border-primary py-5" ondragover="onDragOver(event)" ondrop="onDrop(event)" >
-                <h1 class="pb-3">Categories</h1>
-                </div>
-            <div class="card border-primary py-5" ondragover="onDragOver(event)" ondrop="onDrop(event)">
-                <h1 class="pb-3">Categories 2</h1>
-            </div>
-            <div class="card border-primary py-5" ondragover="onDragOver(event)" ondrop="onDrop(event)">
-                <h1 class="pb-3">Categories 3</h1>
-            </div>
+
         </div>
+    </div>
+
+
 
 
 
 
 <script src="assets/js/main.js"></script>
+
+
+
+
 
