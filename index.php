@@ -11,7 +11,7 @@ include_once 'templates/head.php';
 <?php
 include_once 'templates/header.php';
 ?>
-<main>
+<main class="pt-5">
 <?php include_once 'src/core/router.php'; ?>
 </main>
 <?php

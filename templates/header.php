@@ -27,7 +27,7 @@
                 </div>
                 <div class="list-group">
                     <button type="button" class="btn btn-primary text-white">
-                        <a class="btn btn-primary text-white p-0" href="index.php?page=kanban">Se connecter</a>
+                        <a class="btn btn-primary text-white p-0" href="index.php?page=register">Se connecter</a>
                     </button>
                 </div>
             </div>

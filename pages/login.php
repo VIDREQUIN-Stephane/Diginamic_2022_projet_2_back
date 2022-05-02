@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config.php';
+include 'config_serveur.php';
 try
 {
 	$bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);

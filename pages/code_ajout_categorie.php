@@ -18,7 +18,7 @@
         </p>
     </form>
     <?php
-    include 'config.php';
+    include 'config_serveur.php';
     try {
         $dbh = new PDO(DSN, LOGIN, PASSWORD, array(PDO::ATTR_PERSISTENT => true));
 
