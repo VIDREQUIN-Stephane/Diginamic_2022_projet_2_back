@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config_serveur.php';
+include_once 'config_sever.php';
 try
 {
 	$bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
@@ -23,8 +23,9 @@ if(isset($_SESSION['id']))
 ?>
     <h2>Profil de <?php echo $userinfo['prenom'] . ' ' .  $userinfo['nom']; ?></h2>
     Adresse mail : <?php echo $userinfo['email']; ?>
-    <a href="edit.php">Modifier mon profil</a> <br>
-    <a href="unlog.php">Se déconnecter</a><br><br><br>
+        <?php echo $userinfo['photo'] ?>
+    <a href="index.php?page=monprofil">Modifier mon profil</a> <br>
+    <a href="index.php?page=deconnection">Se déconnecter</a><br><br><br>
 <?php
     
 }

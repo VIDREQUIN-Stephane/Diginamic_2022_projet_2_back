@@ -1,6 +1,6 @@
 <?php
 include_once 'config_sever.php';
-
+include_once 'fileregister.php';
 try
 {
     $bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
@@ -17,6 +17,7 @@ if (isset ($_POST['submit'])) {
     $email = htmlspecialchars($_POST['email']);
     $mdp = sha1($_POST['mdp']);
     $mdp_ = sha1($_POST['mdp_']);
+    $file = $_POST['photo'];
     // FORMULAIRE NON VIDE
     if(!empty($_POST['prenom'])
         AND !empty ($_POST['nom'])
@@ -33,9 +34,9 @@ if (isset ($_POST['submit'])) {
                 // PASSWORD ET CONFIRMATION IDENTIQUES
                 if(($_POST['mdp']) == ($_POST['mdp_'])) {
                     // INSERTION DANS LA BASE DE DONNEE
-                    $insertmbr = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, email, password) VALUES(?, ?, ?, ?)');
-                    $insertmbr->execute(array($nom, $prenom, $email, $mdp));
-                    $error = 'Compte créé. <a href="login.php">Se connecter</a>';
+                    $insertmbr = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, email, password, photo) VALUES(?, ?, ?, ?, ?)');
+                    $insertmbr->execute(array($nom, $prenom, $email, $mdp, $file));
+                    $error = '<div class="alert alert-success" role="alert">Compte crée !</div> <a href="index.php?page=monprofil">Se connecter</a>';
                 } else {
                     $error = 'Les mots de passe ne sont pas identiques, veuillez réessayer.';
                 }
@@ -52,7 +53,7 @@ if (isset ($_POST['submit'])) {
 ?>
     <!-- FORMULAIRE D'ENREGISTREMENT -->
 
-    <form class="row g-3 needs-validatio container-fluid py-5" action="index.php?page=register" method="post">
+    <form class="row g-3 needs-validation container-fluid py-5" action="index.php?page=register" method="post">
         <!-- NOM -->
             <div class="col-md-4">
                 <label for="nom" class="form-label">Nom</label>
@@ -77,7 +78,7 @@ if (isset ($_POST['submit'])) {
                     <span class="input-group-text" id="inputGroupPrepend">@</span>
                     <input  type="email" name="email" id="email" value="<?php if(isset($email)) { echo $email; } ?>" placeholder="name@example.com" aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
-                        Please choose a username.
+                        Choisir un utilisateur
                     </div>
                 </div>
             </div>
@@ -98,7 +99,7 @@ if (isset ($_POST['submit'])) {
         <!-- PHOTO -->
         <div class="mb-3 col-md-4">
             <label for="photo" class="form-label">Photo de profil :</label>
-            <input class="form-control" type="file" name="photo" id="photo">
+            <input class="form-control" type="file" name="photo" id="photo" <?php keppData('fichier') ?>>
         </div>
         <!-- SUBMIT -->
         <div class="col-12">

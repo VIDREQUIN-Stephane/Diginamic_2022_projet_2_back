@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'config_serveur.php';
+include 'config_sever.php';
 try
 {
 	$bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
@@ -21,15 +21,12 @@ if (isset($_SESSION['id'])) {
     if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
     {
     ?>
-    <a href="edit.php">Modifier mon profil</a> <br>
-    <a href="unlog.php">Se déconnecter</a>
+    <a href="index.php?page=monprofil">Modifier mon profil</a> <br>
+    <a href="index.php?page=deconnection">Se déconnecter</a>
     <?php
     }
 } else {
-    //******************************** */
-    //****** Cookies à inclure *********/
-    //******************************** */
-    // include_once('cookie.php');
+ include_once('cookie.php');
     if(isset($_POST['emailConnect']))
     {
         $emailConnect = htmlspecialchars($_POST['emailConnect']);
@@ -50,7 +47,7 @@ if (isset($_SESSION['id'])) {
                 $_SESSION['id'] = $userinfo['id'];
                 $_SESSION['email'] = $userinfo['email'];
                 $id = $_SESSION['id'];
-                header("Location: profil.php");
+                header("Location: index.php?page=monprofil");
             }
             else
             {
@@ -64,28 +61,30 @@ if (isset($_SESSION['id'])) {
     }
     ?>
     <!-- FORMULAIRE CONNECTION -->
-    <form action='login.php' method="post">
+    <form class="container-fluid py-5 row g-3" action='index.php?page=login' method="post">
         <!-- ADRESSE MAIL -->
-        <label for="emailConnect">
-            Adresse mail : 
-            <input type="email" name="emailConnect" id="emailConnect">
-        </label><br>
+        <div class="form-floating mb-3 col-md-4">
+            <input type="email" name="emailConnect" id="emailConnect" class="form-control" placeholder="name@example.com">
+            <label for="emailConnect">Adresse mail</label>
+        </div>
         <!-- MOT DE PASSE -->
-        <label for="mdpConnect">
-            Mot de passe : 
-            <input type="password" name="mdpConnect" id="mdpConnect">
-        </label><br>
+        <div class="form-floating col-md-4">
+            <input type="password" name="mdpConnect" id="mdpConnect" class="form-control" placeholder="Password">
+            <label for="mdpConnect" >Mot de passe</label>
+        </div>
         <!-- REMEMBER ME -->
-        <label for="rememberMe">
-        Se souvenir de moi
-            <input type="checkbox" name="rememberMe" id="rememberMe">
-        </label><br>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe" role="switch" checked>
+            <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
+        </div>
         <!-- SUBMIT -->
-        <input type="submit" value="Se connecter">
+        <div class="col-12">
+            <button type="submit" value="Se connecter" class="btn btn-primary mb-3 text-white" name="submit" id="sumbit">Se connecter</button>
+        </div>
     </form>
     <?php
         if (isset($error)) {
-            echo '<font color="red" class="error">' . $error . '</font>';
+            echo '<div class="alert alert-danger">'.$error.'</div>';
         }
 }
 ?>
