@@ -91,9 +91,9 @@ class Tache{
       $this->comment=$comment;
    }
 
-   public function __toString()
+   public function __toString() :string
    {
-      echo ("Nom : ".$this->getNom()."<br/>Echeance : ".$this->getecheance()."<br/>Commentaire : ".$this->getComment()."<br/><br/>");
+      return ("Nom : ".$this->getNom()."<br/>Echeance : ".$this->getecheance()."<br/>Commentaire : ".$this->getComment()."<br/><br/>");
    }
 
    /**
