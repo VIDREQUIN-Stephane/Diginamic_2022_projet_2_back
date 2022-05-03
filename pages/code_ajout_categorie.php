@@ -40,7 +40,7 @@ try
     }
     ?>
 
- <form action="index.php?page=categ" method="post">
+ <form action="index.php?page=kanban" method="post">
      <div>
          <input id="categorie" name="categorie" type="text">
      </div>
