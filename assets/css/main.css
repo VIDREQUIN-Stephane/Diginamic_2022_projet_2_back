@@ -66,6 +66,12 @@
   box-sizing: border-box;
 }
 
+/*footer {  Pour réactiver cette fonction, il faudra d'abord prévoir un script JS qui réintègre le pied dans le flux lorsque le curseur arrive en bas.
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}*/
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
