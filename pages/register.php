@@ -91,7 +91,7 @@ if (isset ($_POST['submit'])) {
         </div>
         <!-- CONFIRMATION MOT DE PASSE -->
         <div class="col-md-4">
-            <label for="mdp_" class="form-label">Mot de passe</label>
+            <label for="mdp_" class="form-label">Confirmer mot de passe</label>
             <div class="col-sm-10">
                 <input type="password" class="form-control" name="mdp_" id="mdp_">
             </div>
