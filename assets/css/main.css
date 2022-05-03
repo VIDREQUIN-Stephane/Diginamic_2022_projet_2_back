@@ -66,11 +66,11 @@
   box-sizing: border-box;
 }
 
-footer {
+/*footer {  Pour réactiver cette fonction, il faudra d'abord prévoir un script JS qui réintègre le pied dans le flux lorsque le curseur arrive en bas.
   width: 100%;
-  position: absolute;
-  bottom: 0;
-}
+  position: fixed;
+  bottom: 0px;
+}*/
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
