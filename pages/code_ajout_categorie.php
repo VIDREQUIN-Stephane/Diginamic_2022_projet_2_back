@@ -11,18 +11,18 @@ try
 
         foreach ($statement as $row) {
             ?> 
-                <p><?= $row['id_utilisateur'] ?> <?= $row['nom_categorie'] ?></p>
+                <p><?= $row['Id'] ?> <?= $row['designation'] ?></p>
         
     <?php
         }
-
+        //var_dump($_POST['categorie']);
         //ENREGISTREMENT D'UNE NOUVELLE TÂCHE      
 
         if (isset($_POST['submit'])) {
             if (!empty($_POST['categorie'])) {
                 //enregistrer la tâche dans la bdd
                 $categorie = $_POST['categorie'];
-                $statement = $dbh->prepare("INSERT INTO categorie (id,id_utilisateur,nom_categorie) VALUES (?,?,?)");
+                $statement = $dbh->prepare("INSERT INTO categorie (categorie) VALUES (?)");
                 $statement->execute(['categorie' => $categorie]);
     ?>
                 <p>Tâche <?= $categorie ?> créée</p>
