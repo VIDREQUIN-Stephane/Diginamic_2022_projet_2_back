@@ -16,7 +16,7 @@ try
     <?php
         }
         //var_dump($_POST['categorie']);
-        //ENREGISTREMENT D'UNE NOUVELLE TÂCHE      
+        //ENREGISTREMENT D'UNE NOUVELLE CATEGORIE      
 
         if (isset($_POST['submit'])) {
             if (!empty($_POST['categorie'])) {
