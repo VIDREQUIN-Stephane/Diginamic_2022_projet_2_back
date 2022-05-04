@@ -19,6 +19,8 @@ try
 
         //ENREGISTREMENT D'UNE NOUVELLE TÂCHE      
 $id_user = $_SESSION['id'];
+        var_dump($id_user);
+
 
 
         if (isset($_POST['submit'])) {
@@ -26,10 +28,14 @@ $id_user = $_SESSION['id'];
                 //enregistrer la tâche dans la bdd
                 $categorie = $_POST['categorie'];
 
-                $statement = $dbh->prepare("INSERT INTO categorie (id,id_utilisateur,nom_categorie) VALUES (?,$id_user,?)");
+                $statement = $dbh->prepare("INSERT INTO categorie (id,id_utilisateur,nom_categorie) VALUES (null,$id_user,$categorie)");
 
 
-                $statement->execute(['categorie' => $categorie]);
+                if (!$statement->execute(['categorie' => $categorie])){
+                    print '<h2 class="error">Erreur de suppression des données : ' . $statement->errorCode() . '</h2>';
+                }else{
+                    print '<h2 class="valid">' . $statement->rowCount() . ' ajout en base de données</h2>';
+                }
     ?>
                 <p>Tâche <?= $categorie ?> créée</p>
             <?php
@@ -46,7 +52,7 @@ $id_user = $_SESSION['id'];
     }
     ?>
 
- <form action="index.php?page=kanban" method="post">
+ <form action="index.php?page=categ" method="post">
      <div>
          <input id="categorie" name="categorie" type="text">
      </div>
@@ -54,3 +60,6 @@ $id_user = $_SESSION['id'];
          <button href="index.php?page=kanban" type="submit" name="submit">Ajouter une catégorie</button>
      </p>
  </form>
+<?php
+var_dump($categorie);
+?>
