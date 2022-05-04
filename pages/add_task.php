@@ -24,10 +24,14 @@
 
 
    try {
-	$dbh = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
-   $nomTask = $_POST['nomTask'];
-   $dateStart = $_POST['dateStart'];
-   $echeance = $_POST['echeance'];
-   $comment = $_POST['comment'];
-   $statement = $dbh->prepare("INSERT INTO tache (champ1, champ2, champ3, champ4) VALUES ($nomTask, $dateStart, $echeance, $comment)");
-   $statement->execute(['tache' => $categorie]);
+      $dbh = new PDO("mysql:host=$host;dbname=$base", $user, $pass); // connection à la base
+      $nomTask = $_POST['nomTask'];
+      $dateStart = $_POST['dateStart'];
+      $echeance = $_POST['echeance'];
+      $comment = $_POST['comment'];
+      $statement = $dbh->prepare("INSERT INTO tache (nom_tache, date_start, echeance/*, champ4*/) VALUES ($nomTask, $dateStart, $echeance/*, $comment*/)"); // intégration des données à la base
+      $statement->execute(['user' => $nomTask], ['cat' => $dateStart], ['cat' => $echeance], ['cat' => $comment]); // exécution de l'enregistrement
+   } catch (exception $e) { // juste au cas où
+      echo 'impossible de créer la tâche';
+   }
+   /* +++ il faudra modifier cette commande pour envoyer le commentaire dans sa propre table +++ */
