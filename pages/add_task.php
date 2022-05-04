@@ -19,3 +19,7 @@
    } catch (exception $e) {
           echo 'erreur de connection à la base';
    }
+
+   // connecte à la base de doonée
+
+   INSERT INTO 'tache' VALUES '$newTask->nomTask', '$newTask->dateStart', '$newTask->echeance', '$newTask->comment';

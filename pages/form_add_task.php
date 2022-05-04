@@ -5,11 +5,11 @@
    </div>
    <div>
       <label for="dateStart">Commencer le :   </label>
-      <input id="dateStart" name="dateStart" type="date" value="2022-01-02" min="2022-01-02" max="2122-01-02"> // valide pour un siècle !!! -->
+      <input id="dateStart" name="dateStart" type="date" value="2022-01-02" min="2022-01-02" max="2122-01-02"> <!-- valide pour un siècle !!! -->
    </div>
    <div>
       <label for="echeance">A rendre pour le :   </label>
-      <input id="echeance" name="echeance" type="date" value="2022-01-02" min="2022-01-02" max="2122-01-02"> // valide pour un siècle !!! -->
+      <input id="echeance" name="echeance" type="date" value="2022-01-02" min="2022-01-02" max="2122-01-02"> <!-- valide pour un siècle !!! -->
    </div>
    <div>
       <label for="nomTask">Joindre un commentaire :   </label>
