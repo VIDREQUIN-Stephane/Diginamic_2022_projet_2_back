@@ -55,7 +55,6 @@ try
             <?php
         foreach ($statement as $row) {
                         ?>
-                <p><?= $row['id_utilisateur'] ?> <?= $row['nom_categorie'] ?></p>
 
                 <div class="col-12 col-lg-6 col-xl-3">
                     <div class="card card-border-primary">
