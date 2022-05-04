@@ -18,7 +18,7 @@ if (isset ($_POST['submit'])) {
     $email = htmlspecialchars($_POST['email']);
     $mdp = sha1($_POST['mdp']);
     $mdp_ = sha1($_POST['mdp_']);
-    $file = $_POST['photo'];
+    // $file = $_POST['photo'];
     // FORMULAIRE NON VIDE
     if(!empty($_POST['prenom'])
         AND !empty ($_POST['nom'])
@@ -35,8 +35,8 @@ if (isset ($_POST['submit'])) {
                 // PASSWORD ET CONFIRMATION IDENTIQUES
                 if(($_POST['mdp']) == ($_POST['mdp_'])) {
                     // INSERTION DANS LA BASE DE DONNEE
-                    $insertmbr = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, email, password, photo) VALUES(?, ?, ?, ?, ?)');
-                    $insertmbr->execute(array($nom, $prenom, $email, $mdp, $file));
+                    $insertmbr = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, email, password) VALUES(:nom, :prenom, :email, :mdp )');
+                    $insertmbr->execute(['nom' => $nom, 'prenom' => $prenom, 'email' => $email, 'mdp' => $mdp]);
                     $error = '<div class="alert alert-success" role="alert">Compte crée !</div> <a href="index.php?page=monprofil">Se connecter</a>';
 
                 } else {
