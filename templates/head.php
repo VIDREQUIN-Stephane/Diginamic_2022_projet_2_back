@@ -10,7 +10,7 @@
     <meta name="theme-color" content="">
     <meta name="msapplication-TileColor" content="">
     <link rel="shortcut icon" type="image/png" href="../assets/images/logo.webp"/>
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <title><?= $_GET['page'] ?? "Bienvenue" ?></title>
 
 </head>

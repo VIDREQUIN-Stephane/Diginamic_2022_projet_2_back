@@ -11,7 +11,7 @@ try
         $statement->execute();
 
         foreach ($statement as $row) {
-            ?>
+                        ?>
                 <p><?= $row['id_utilisateur'] ?> <?= $row['nom_categorie'] ?></p>
         
     <?php
@@ -19,11 +19,16 @@ try
 
         //ENREGISTREMENT D'UNE NOUVELLE TÂCHE      
 $id_user = $_SESSION['id'];
+
+
         if (isset($_POST['submit'])) {
             if (!empty($_POST['categorie'])) {
                 //enregistrer la tâche dans la bdd
                 $categorie = $_POST['categorie'];
+
                 $statement = $dbh->prepare("INSERT INTO categorie (id,id_utilisateur,nom_categorie) VALUES (?,$id_user,?)");
+
+
                 $statement->execute(['categorie' => $categorie]);
     ?>
                 <p>Tâche <?= $categorie ?> créée</p>
