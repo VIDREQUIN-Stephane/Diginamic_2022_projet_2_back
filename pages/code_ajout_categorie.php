@@ -5,21 +5,8 @@ try
 {
 	$dbh = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
 
-        //AFFICHAGE DES TÂCHES
-        $query = 'SELECT * FROM categorie';
-        $statement = $dbh->prepare($query);
-        $statement->execute();
-
-        foreach ($statement as $row) {
-                        ?>
-                <p><?= $row['id_utilisateur'] ?> <?= $row['nom_categorie'] ?></p>
-        
-    <?php
-        }
-
-        //ENREGISTREMENT D'UNE NOUVELLE TÂCHE      
+        //ENREGISTREMENT D'UNE NOUVELLE TÂCHE
 $id_user = $_SESSION['id'];
-        var_dump($id_user);
 
 
 
@@ -61,6 +48,3 @@ $id_user = $_SESSION['id'];
          <button href="index.php?page=categ" type="submit" name="submit">Ajouter une catégorie</button>
      </p>
  </form>
-<?php
-var_dump($categorie);
-?>
