@@ -1,4 +1,4 @@
-<h1><?= isset($_GET['id']) ? 'Modification d\'une categories' : 'Création d\'une categories' ?></h1>
+<h1><?= isset($_GET['id']) ? 'Modification d\'une categorie' : 'Création d\'une categorie' ?></h1>
 <?php
    include_once 'config_sever.php';
 try
