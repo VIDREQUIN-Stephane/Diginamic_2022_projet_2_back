@@ -16,3 +16,5 @@ try{
       // En cas d'erreur, on informe l'usager.
       echo "Erreur : Impossible de se connecter à la base";
 }
+
+// inserer l'objet en bdd  -> INSERT INTO
