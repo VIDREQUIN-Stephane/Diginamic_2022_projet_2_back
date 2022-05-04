@@ -1,7 +1,7 @@
 <script defer src="assets/js/script.js" ></script>
 
     <div class="first">
-        <div class="containerhome">
+        <div class="containerhome ">
             <div class="panel active" style="background-image: url(assets/images/trello1.jpg)">
                 <h2>Page d'accueil</h2>
             </div>
@@ -20,7 +20,7 @@
         </div>
     </div>
 
-<section>
+<section class="bg-primary bg-opacity-25">
     <div class="container py-5">
         <div class="row align-items-center">
 
@@ -38,7 +38,7 @@
         </div>
     </div>
 </section>
-<section class="bg-primary bg-opacity-25">
+<section>
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-6 py-5 my-5 col-sm-12">
