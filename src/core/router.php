@@ -16,9 +16,6 @@ if(isset($_GET['page'])){
     if ($_GET['page'] == 'login') {
         $page = 'login.php';
     }
-    if ($_GET['page'] == 'login') {
-        $page = 'login.php';
-    }
     if ($_GET['page'] == 'categ') {
         $page = 'code_ajout_categorie.php';
     }
@@ -33,6 +30,9 @@ if(isset($_GET['page'])){
     }
     if ($_GET['page'] == 'form_add_task') {
         $page = 'form_add_task.php';
+    }
+    if ($_GET['page'] == 'add_task') {
+        $page = 'add_task.php';
     }
 }
 include_once(dirname(__FILE__).'/../../pages/'.$page);

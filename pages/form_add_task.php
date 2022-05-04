@@ -1,4 +1,4 @@
-<form action="add_task" method="post" class="formulaire" >
+<form action="index.php?page=add_task" method="post" class="formulaire" >
    <div>
       <label for="nomTask">Nom de la tâche :   </label>
       <input id="nomTask" name="nomTask" type="text" placeholder="Champ obligatoire" required>
