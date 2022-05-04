@@ -21,19 +21,22 @@ try
 $id_user = $_SESSION['id'];
 
 
+
         if (isset($_POST['submit'])) {
             if (!empty($_POST['categorie'])) {
                 //enregistrer la tâche dans la bdd
                 $categorie = $_POST['categorie'];
+                echo $id_user;
+                echo $categorie;
 
-                $statement = $dbh->prepare("INSERT INTO categorie (id,id_utilisateur,nom_categorie) VALUES (?,$id_user,?)");
+                $statement = $dbh->prepare("INSERT INTO categorie (id_utilisateur, nom_categorie) VALUES ( :user, :cat)");
 
 
-                $statement->execute(['categorie' => $categorie]);
+                $statement->execute(['user' => $id_user, 'cat' => $categorie]);
     ?>
                 <p>Tâche <?= $categorie ?> créée</p>
             <?php
-                header('location: tp_trekker.php');
+                header('location: index.php?page=kanban');
             } else { ?>
                 <p>entrer quelque chose svp</p> <?php
             }
@@ -46,11 +49,11 @@ $id_user = $_SESSION['id'];
     }
     ?>
 
- <form action="index.php?page=kanban" method="post">
+ <form action="index.php?page=categ" method="post">
      <div>
          <input id="categorie" name="categorie" type="text">
      </div>
      <p>
-         <button href="index.php?page=kanban" type="submit" name="submit">Ajouter une catégorie</button>
+         <button href="index.php?page=categ" type="submit" name="submit">Ajouter une catégorie</button>
      </p>
  </form>
