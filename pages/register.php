@@ -98,11 +98,6 @@ if (isset ($_POST['submit'])) {
                 <input type="password" class="form-control" name="mdp_" id="mdp_">
             </div>
         </div>
-        <!-- PHOTO -->
-        <div class="mb-3 col-md-4">
-            <label for="photo" class="form-label">Photo de profil :</label>
-            <input class="form-control" type="file" name="photo" id="photo" <?php keppData('fichier') ?>>
-        </div>
         <!-- SUBMIT -->
         <div class="col-12">
             <button type="submit" value="Je m'enregistre" class="btn btn-primary mb-3 text-white" name="submit" id="sumbit">Je m'enregistre</button>
