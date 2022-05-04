@@ -22,4 +22,12 @@
 
    // connecte à la base de doonée
 
-   INSERT INTO 'tache' VALUES '$newTask->nomTask', '$newTask->dateStart', '$newTask->echeance', '$newTask->comment';
+
+   try {
+	$dbh = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
+   $nomTask = $_POST['nomTask'];
+   $dateStart = $_POST['dateStart'];
+   $echeance = $_POST['echeance'];
+   $comment = $_POST['comment'];
+   $statement = $dbh->prepare("INSERT INTO tache (champ1, champ2, champ3, champ4) VALUES ($nomTask, $dateStart, $echeance, $comment)");
+   $statement->execute(['tache' => $categorie]);
