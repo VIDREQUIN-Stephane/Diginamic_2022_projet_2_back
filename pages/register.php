@@ -1,6 +1,7 @@
 <?php
 include_once 'config_sever.php';
 include_once 'fileregister.php';
+include_once 'avatar.php';
 try
 {
     $bdd = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
@@ -37,6 +38,7 @@ if (isset ($_POST['submit'])) {
                     $insertmbr = $bdd->prepare('INSERT INTO utilisateur(nom, prenom, email, password, photo) VALUES(?, ?, ?, ?, ?)');
                     $insertmbr->execute(array($nom, $prenom, $email, $mdp, $file));
                     $error = '<div class="alert alert-success" role="alert">Compte crée !</div> <a href="index.php?page=monprofil">Se connecter</a>';
+
                 } else {
                     $error = 'Les mots de passe ne sont pas identiques, veuillez réessayer.';
                 }

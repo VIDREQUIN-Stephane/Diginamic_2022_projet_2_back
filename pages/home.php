@@ -1,17 +1,25 @@
-<section class="pt-5">
-    <div class="card bg-dark text-dark ">
-        <img src="/assets/images/milad-fakurian-E8Ufcyxz514-unsplash.webp" class="card-img img-fluid" alt="...">
-        <div class="card-img-overlay d-flex flex-column justify-content-center">
-            <div class="row justify-content-center text-center align-items-center">
-                <h5 class="card-title display-1">Card title</h5>
-                <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<script defer src="assets/js/script.js" ></script>
+
+    <div class="first">
+        <div class="containerhome">
+            <div class="panel active" style="background-image: url(assets/images/trello1.jpg)">
+                <h2>Page d'accueil</h2>
             </div>
-            <div class="d-grid gap-2 col-6 col-sm-4 col-lg-2 mx-auto pt-1">
-                <button type="button" class="btn btn-dark">En savoir plus ...</button>
+            <div class="panel" style="background-image: url(assets/images/trello2.jpg)">
+                <h2>Gérer un calendrier</h2>
+            </div>
+            <div class="panel" style="background-image: url(assets/images/trello3.jpg)">
+                <h2>Nombreuses fonctionnalités</h2>
+            </div>
+            <div class="panel" style="background-image: url(assets/images/trello4.jpg)">
+                <h2>Modifiez votre tâche</h2>
+            </div>
+            <div class="panel" style="background-image: url(assets/images/trello5.jpg)">
+                <h2>Ecrire un commentaire</h2>
             </div>
         </div>
     </div>
-</section>
+
 <section>
     <div class="container py-5">
         <div class="row align-items-center">
@@ -44,3 +52,4 @@
             </div>
         </div>
 </section>
+

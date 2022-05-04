@@ -28,5 +28,11 @@ if(isset($_GET['page'])){
     if ($_GET['page'] == 'monprofil') {
         $page = 'profil.php';
     }
+    if ($_GET['page'] == 'avatar') {
+        $page = 'avatar.php';
+    }
+    if ($_GET['page'] == 'test') {
+        $page = 'test.php';
+    }
 }
 include_once(dirname(__FILE__).'/../../pages/'.$page);

@@ -1,4 +1,7 @@
-<?php include_once 'pages/connection.php'?>
+<?php
+include_once 'pages/connection.php';
+include_once 'pages/avatar.php';
+?>
 
 <header class="px-5 py-2" role="banner" id="menu-de-navigation">
     <nav class="navbar fixed-top shadow-sm py-2 navbar-expand-md navbar-light bg-white">
@@ -36,20 +39,25 @@
                     <ul class="navbar-nav mb-2 mb-lg-0 pe-5 me-5">
                         <li class="nav-item"><a class="nav-link fs-5 text-primary" href="index.php?page=home">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link fs-5 text-primary" href="index.php?page=kanban">Kanban</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="index.php?page=monprofil">Mon profil</a></li>
                     </ul>
                     <div class="list-group">
                             <button type="button" class="btn btn-danger text-white"><a class="btn btn-danger p-0" href="index.php?page=deconnection">Se déconnecter</a></button>
                     </div>
+                    <?php
+                    $profil = $_SESSION['email'];
+                    $initavatar = new Avatar("$profil");
+                    echo '<div class="text-center ps-5">
+                        <img alt="Photo de profil" src="' . $initavatar->base64() . '" />
+                    </div>';
+                    $initavatar->save("upload/$profil.png");
+                    ?>
                         <?php
                         endif;
                         ?>
-
-
-
             </div>
-
             </div>
-
     </nav>
 </header>
+
 
