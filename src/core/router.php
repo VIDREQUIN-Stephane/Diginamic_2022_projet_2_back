@@ -31,8 +31,8 @@ if(isset($_GET['page'])){
     if ($_GET['page'] == 'avatar') {
         $page = 'avatar.php';
     }
-    if ($_GET['page'] == 'test') {
-        $page = 'test.php';
+    if ($_GET['page'] == 'form_add_task') {
+        $page = 'form_add_task.php';
     }
 }
 include_once(dirname(__FILE__).'/../../pages/'.$page);
