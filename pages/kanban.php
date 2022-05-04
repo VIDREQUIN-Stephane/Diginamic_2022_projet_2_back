@@ -77,7 +77,7 @@
 
                             </div>
 
-                            <a href="#" class="btn btn-primary btn-block">Add new</a>
+                            <a href="form_add_task.php" class="btn btn-primary btn-block">Add new</a>
 
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             <div class="list pb-5">
 
                             </div>
-                            <a href="#" class="btn btn-primary btn-block">Add new</a>
+                            <a href="form_add_task.php" class="btn btn-primary btn-block">Add new</a>
 
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                             </div>
 
 
-                            <a href="#" class="btn btn-primary btn-block">Add new</a>
+                            <a href="form_add_task.php" class="btn btn-primary btn-block">Add new</a>
 
                         </div>
                     </div>
@@ -176,7 +176,7 @@
 
                             </div>
 
-                            <a href="#" class="btn btn-primary btn-block">Add new</a>
+                            <a href="form_add_task.php" class="btn btn-primary btn-block">Add new</a>
                         </div>
                     </div>
                 </div>
