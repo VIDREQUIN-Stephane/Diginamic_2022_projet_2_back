@@ -39,11 +39,28 @@
 
         <div class="container pt-5">
             <h1 class="h3 mb-3">Kanban Board</h1>
-            <div class="row lists pb-5">
+<h1><?= isset($_GET['id']) ? 'Modification d\'une categories' : 'Création d\'une categories' ?></h1>
+<?php
+   include_once 'config_sever.php';
+try
+{
+	$dbh = new PDO("mysql:host=$host;dbname=$base", $user, $pass);
+
+        //AFFICHAGE DES TÂCHES
+        $query = 'SELECT * FROM categorie';
+        $statement = $dbh->prepare($query);
+        $statement->execute();
+?>
+    <div class="row lists pb-5">
+            <?php
+        foreach ($statement as $row) {
+                        ?>
+                <p><?= $row['id_utilisateur'] ?> <?= $row['nom_categorie'] ?></p>
+
                 <div class="col-12 col-lg-6 col-xl-3">
                     <div class="card card-border-primary">
                         <div class="card-header">
-                            <h5 class="card-title">Categories 1</h5>
+                            <h5 class="card-title"><?= $row['nom_categorie'] ?></h5>
                             <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
                         </div>
                         <div class="card-body p-3">
@@ -82,117 +99,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 col-xl-3">
-                    <div class="card card-border-warning">
-                        <div class="card-header">
-                            <div class="card-actions float-right">
-                                <div class="dropdown show">
-                                    <a href="#" data-toggle="dropdown" data-display="static">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal align-middle">
-                                            <circle cx="12" cy="12" r="1"></circle>
-                                            <circle cx="19" cy="12" r="1"></circle>
-                                            <circle cx="5" cy="12" r="1"></circle>
-                                        </svg>
-                                    </a>
 
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <h5 class="card-title">In Progress</h5>
-                            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
-                        </div>
-                        <div class="card-body">
-
-                            <div class="card mb-3 bg-light list-item" draggable="true">
-                                <div class="card-body p-3">
-                                    <div class="float-right mr-n2">
-
-                                    </div>
-                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
-                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
-                                </div>
-                            </div>
-
-                            <div class="card mb-3 bg-light list-item" draggable="true">
-                                <div class="card-body p-3">
-                                    <div class="float-right mr-n2">
-
-                                    </div>
-                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
-                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
-                                </div>
-                            </div>
-                            <div class="card mb-3 bg-light list-item" draggable="true">
-                                <div class="card-body p-3">
-                                    <div class="float-right mr-n2">
-
-                                    </div>
-                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
-                                    <a class="btn btn-outline-primary btn-sm" href="#">Edit</a>
-                                </div>
-                            </div>
-                            <div class="list pb-5">
-
-                            </div>
-                            <a href="index.php?page=form_add_task" class="btn btn-primary btn-block">Add new</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-xl-3">
-                    <div class="card card-border-danger">
-                        <div class="card-header">
-
-                            <h5 class="card-title">On hold</h5>
-                            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
-                        </div>
-                        <div class="card-body">
-
-                            <div class="list pb-5">
-
-                            </div>
-
-
-                            <a href="index.php?page=form_add_task" class="btn btn-primary btn-block">Add new</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 col-xl-3">
-                    <div class="card card-border-success">
-                        <div class="card-header">
-                            <div class="card-actions float-right">
-
-                            </div>
-                            <h5 class="card-title">Completed</h5>
-                            <h6 class="card-subtitle text-muted">Nam pretium turpis et arcu. Duis arcu tortor.</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="list pb-5">
-
-                            </div>
-
-                            <a href="index.php?page=form_add_task" class="btn btn-primary btn-block">Add new</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    <?php
+        }
+}
+catch (Exception $e) {
+    // En cas d'erreur, on affiche un message
+    echo 'Erreur : ' . $e->getMessage();
+}
+?>
     </div>
-
-
-
-
-
-
 <script src="assets/js/main.js"></script>
-
-
-
-
-
