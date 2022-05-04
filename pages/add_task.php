@@ -1,6 +1,7 @@
 <?php
    include_once 'config_sever.php'; // code d'acces au serveur.
 
+
    try{
       if (is_connected()){
          try{
